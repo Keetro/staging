@@ -1,0 +1,44 @@
+.zapierTimeline{
+	position: relative;
+}
+
+/*Line*/
+.zapierTimeline>li::before{
+	content:'';
+	position: absolute;
+	width: 1px;
+	background-color: #E7E7E7;
+	top: 35px;
+	bottom: -40px;
+	left:-26px;
+}
+
+/*Circle*/
+.zapierTimeline>li::after{
+    text-align: center;
+	z-index: 10;
+	content:counter(item);
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height:43px;
+	border:3px solid white;
+	background-color: #E7E7E7;
+	border-radius: 50%;
+	top:35px;
+	left:-50px;
+}
+
+/*Content*/
+.zapierTimeline>li{
+	counter-increment: item;
+	padding: 50px 10px 10px 10px;
+	margin-left: 0px;
+	min-height:70px;
+	position: relative;
+	background-color: white;
+	list-style: none;
+}
+.zapierTimeline>li:nth-last-child(1)::before{
+	width: 0px;
+}

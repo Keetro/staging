@@ -1,0 +1,24 @@
+<html> <head>
+  <title>Keetro.org - Apply for Membership!</title>
+  <script type="text/javascript">
+function getAllUrlParams(url) {
+  document.write(url);
+  // get query string from url (optional) or window
+  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+  // we'll store the parameters here
+  var obj = {};
+
+  // if query string exists
+  if (queryString) {
+
+    // stuff after # is not part of query string, so get rid of it
+    queryString = queryString.split('#')[0];
+    document.getElementById('typeform-full').src = document.getElementById('typeform-full').src +'?'+queryString;
+  }
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> <style type="text/css"> html{ margin: 0; height: 100%; overflow: hidden; } iframe{ position: absolute; left:0; right:0; bottom:0; top:0; border:0; } </style> </head> <body> <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://keetro.typeform.com/to/fDvOIs" onload="getAllUrlParams(window.location.href)"></iframe> <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/1634032.js"></script>
+<!-- End of HubSpot Embed Code -->
+  </body> </html>
